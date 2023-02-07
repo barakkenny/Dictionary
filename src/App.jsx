@@ -12,7 +12,7 @@ const App = () => {
   const handleClick = (e) => {
     e.preventDefault();    
     setText(text);
-      
+    dictionaryData();
   }
 
   const dictionaryData = async () => {
@@ -29,9 +29,9 @@ const App = () => {
   }
   } 
  
-  useEffect(()=> {
-    dictionaryData();
-  },[text])
+  // useEffect(()=> {
+  //   dictionaryData();
+  // },[text])
 
  
   
@@ -51,10 +51,10 @@ const App = () => {
       </div>
 
       <div className="content">
-        {callData.map(call => 
-        <div  >
-          {call.phonetics.map(phone => (
-            <div className='audio'>
+        {callData.map((call,i) => 
+        <div  key={i}>
+          {call.phonetics.map((phone, i) => (
+            <div className='audio' key={i}>
              
              <audio controls src={phone.audio}></audio>
              </div>
