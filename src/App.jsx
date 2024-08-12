@@ -5,9 +5,6 @@ import Meanings from './Meanings';
 const App = () => {
   const [text, setText] = useState("");
   const [callData, setCallData] = useState([]);
-  
- 
-  
 
   const handleClick = (e) => {
     e.preventDefault();    
@@ -29,11 +26,7 @@ const App = () => {
   }
   } 
  
-  // useEffect(()=> {
-  //   dictionaryData();
-  // },[text])
 
- 
   
   return (
     <div className='app'>
@@ -55,12 +48,10 @@ const App = () => {
         <div  key={i}>
           {call.phonetics.map((phone, i) => (
             <div className='audio' key={i}>
-             
-             <audio controls src={phone.audio}></audio>
+             <audio controls src={phone.audio.slice(0, 1)}></audio>
              </div>
           ))}
         <Meanings call={call}/>
-
         </div>
         )}
       </div>

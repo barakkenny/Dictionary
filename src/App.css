@@ -11,12 +11,14 @@
     width: 100%;
     height: 100vh;
     text-align: center;
+    background-color: rgb(2, 2, 17);
 }
 
 .app > h1{
     font-weight: 100;
     font-size: 5rem;
     margin-top: 1rem;
+    color: #ffffff;
 }
 
 .search{
@@ -29,9 +31,13 @@
 }
 
 input{
-    width: 15rem;
+    width: 350px;
     height: 3rem;
-    
+    padding-left: 1rem;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    border-radius: 5px;
+    color: #ffffff;
 }
 
 ::placeholder{
@@ -40,7 +46,7 @@ input{
 
 }
 button{
-    margin-left: 3rem;
+    margin-left: 1rem;
     padding: 14px 25px;
     font-size: 1rem
 }

@@ -3,7 +3,7 @@ import './App.css'
 
 const Meanings = ({call}) => {
   let i = 0;
-  const add=()=>{
+  const add =()=> {
     i++
   }
   return (
@@ -12,7 +12,6 @@ const Meanings = ({call}) => {
             meaning.definitions.map((def,i)=> (
                <div className='definition' key={i}>
                 <p>Meaning: {def.definition}</p>
-                
                </div>
             ))
         ))}
